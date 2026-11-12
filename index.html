@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================
+         META
+    ========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Sentinel CX - Customer Feedback Sentiment Diagnostic System"
+    >
+
+    <meta
+        name="theme-color"
+        content="#6657e8"
+    >
+
+    <title>
+        Sentinel CX | Customer Intelligence
+    </title>
+
+
+    <!-- =========================================
+         STYLESHEET
+    ========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     APPLICATION
+====================================================== -->
+
+<div id="app">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="logo">
+                S
+            </div>
+
+
+            <div class="brand-text">
+
+                <h2>
+                    Sentinel CX
+                </h2>
+
+                <span>
+                    Feedback Intelligence
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="main-navigation"
+            aria-label="Main navigation"
+        >
+
+
+            <button
+                class="nav-item active"
+                data-page="dashboard"
+            >
+
+                <span class="nav-icon">
+                    ◈
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="feedback"
+            >
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    Feedback
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="diagnostics"
+            >
+
+                <span class="nav-icon">
+                    ◉
+                </span>
+
+                <span>
+                    Diagnostics
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="insights"
+            >
+
+                <span class="nav-icon">
+                    ✦
+                </span>
+
+                <span>
+                    AI Insights
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="analytics"
+            >
+
+                <span class="nav-icon">
+                    ◫
+                </span>
+
+                <span>
+                    Analytics
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="settings"
+            >
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </button>
+
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+
+            <!-- SYSTEM STATUS -->
+
+            <div class="system-status">
+
+                <small>
+                    SYSTEM STATUS
+                </small>
+
+                <p>
+                    <span class="status-dot"></span>
+                    All systems operational
+                </p>
+
+                <span>
+                    Sentiment Engine v1.0
+                </span>
+
+            </div>
+
+
+            <!-- USER -->
+
+            <div class="sidebar-user">
+
+                <div class="avatar">
+                    AT
+                </div>
+
+                <div>
+
+                    <strong>
+                        Anand Tiwari
+                    </strong>
+
+                    <small>
+                        Administrator
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="main">
+
+
+        <!-- =============================================
+             TOPBAR
+        ============================================== -->
+
+        <header class="topbar">
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="mobile-menu"
+                id="mobile-menu"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <!-- PAGE INFORMATION -->
+
+            <div class="page-information">
+
+                <small id="breadcrumb">
+                    CUSTOMER EXPERIENCE
+                </small>
+
+                <h1 id="page-title">
+                    Feedback Overview
+                </h1>
+
+            </div>
+
+
+            <!-- TOPBAR ACTIONS -->
+
+            <div class="header-actions">
+
+
+                <!-- SEARCH -->
+
+                <button
+                    class="icon-button"
+                    id="global-search-button"
+                    title="Search"
+                >
+                    ⌕
+                </button>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <button
+                    class="icon-button notification-button"
+                    id="notification-button"
+                    title="Notifications"
+                >
+
+                    ♢
+
+                    <span class="notification-badge">
+                        3
+                    </span>
+
+                </button>
+
+
+                <!-- THEME -->
+
+                <button
+                    class="icon-button"
+                    id="theme-btn"
+                    title="Toggle theme"
+                >
+                    🌙
+                </button>
+
+
+                <!-- ANALYZE -->
+
+                <button
+                    class="primary-button"
+                    id="analyze-btn"
+                >
+
+                    <span>
+                        +
+                    </span>
+
+                    Analyze Feedback
+
+                </button>
+
+
+                <!-- USER -->
+
+                <div class="top-avatar">
+                    AT
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =============================================
+             PAGE CONTAINER
+        ============================================== -->
+
+        <section class="content">
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <section
+                id="dashboard"
+                class="page active"
+            >
+
+
+                <!-- HERO -->
+
+                <div class="hero">
+
+
+                    <div class="hero-content">
+
+
+                        <span class="hero-label">
+                            CUSTOMER INTELLIGENCE PLATFORM
+                        </span>
+
+
+                        <h2>
+                            Understand what your
+                            customers really feel.
+                        </h2>
+
+
+                        <p>
+
+                            Detect sentiment, identify
+                            product issues, uncover
+                            inconsistent reviews and
+                            convert customer feedback
+                            into actionable insights.
+
+                        </p>
+
+
+                        <div class="hero-actions">
+
+                            <button
+                                class="hero-primary"
+                                id="hero-analyze"
+                            >
+                                Analyze Feedback
+                            </button>
+
+
+                            <button
+                                class="hero-secondary"
+                                data-page-target="feedback"
+                            >
+                                Explore Feedback →
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="hero-visual">
+
+
+                        <div class="signal-orbit">
+
+                            <div class="orbit orbit-one"></div>
+
+                            <div class="orbit orbit-two"></div>
+
+                            <div class="orbit-core">
+
+                                <span>
+                                    94.6%
+                                </span>
+
+                                <small>
+                                    AI CONFIDENCE
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     KPI CARDS
+                ========================================== -->
+
+                <div class="kpi-grid">
+
+
+                    <!-- TOTAL REVIEWS -->
+
+                    <article class="kpi-card">
+
+                        <div class="kpi-top">
+
+                            <span>
+                                TOTAL REVIEWS
+                            </span>
+
+                            <div class="kpi-icon">
+                                ◉
+                            </div>
+
+                        </div>
+
+
+                        <h2 id="total-reviews">
+                            12,840
+                        </h2>
+
+
+                        <div class="kpi-bottom">
+
+                            <span class="positive">
+                                ↑ 18.4%
+                            </span>
+
+                            <small>
+                                vs last month
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- POSITIVE -->
+
+                    <article class="kpi-card">
+
+                        <div class="kpi-top">
+
+                            <span>
+                                POSITIVE SENTIMENT
+                            </span>
+
+                            <div class="kpi-icon green">
+                                ↑
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            72.8%
+                        </h2>
+
+
+                        <div class="kpi-bottom">
+
+                            <span class="positive">
+                                ↑ 4.2%
+                            </span>
+
+                            <small>
+                                vs last month
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- CRITICAL -->
+
+                    <article class="kpi-card">
+
+                        <div class="kpi-top">
+
+                            <span>
+                                CRITICAL SIGNALS
+                            </span>
+
+                            <div class="kpi-icon red">
+                                !
+                            </div>
+
+                        </div>
+
+
+                        <h2 id="critical-signals">
+                            184
+                        </h2>
+
+
+                        <div class="kpi-bottom">
+
+                            <span class="negative">
+                                ↑ 12.1%
+                            </span>
+
+                            <small>
+                                needs attention
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- CONFIDENCE -->
+
+                    <article class="kpi-card">
+
+                        <div class="kpi-top">
+
+                            <span>
+                                MODEL CONFIDENCE
+                            </span>
+
+                            <div class="kpi-icon purple">
+                                ✦
+                            </div>
+
+                        </div>
+
+
+                        <h2>
+                            94.6%
+                        </h2>
+
+
+                        <div class="kpi-bottom">
+
+                            <span class="positive">
+                                ↑ 1.8%
+                            </span>
+
+                            <small>
+                                model accuracy
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     CHART SECTION
+                ========================================== -->
+
+                <div class="dashboard-grid">
+
+
+                    <!-- SENTIMENT TREND -->
+
+                    <article class="card chart-card">
+
+
+                        <div class="card-header">
+
+
+                            <div>
+
+                                <small>
+                                    SENTIMENT TREND
+                                </small>
+
+                                <h3>
+                                    Customer mood over time
+                                </h3>
+
+                            </div>
+
+
+                            <select
+                                id="chart-period"
+                                class="chart-select"
+                            >
+
+                                <option>
+                                    Last 7 days
+                                </option>
+
+                                <option>
+                                    Last 30 days
+                                </option>
+
+                                <option>
+                                    Last 90 days
+                                </option>
+
+                            </select>
+
+
+                        </div>
+
+
+                        <div class="chart-legend">
+
+                            <span>
+                                <i class="legend-dot positive-dot"></i>
+                                Positive
+                            </span>
+
+                            <span>
+                                <i class="legend-dot negative-dot"></i>
+                                Negative
+                            </span>
+
+                        </div>
+
+
+                        <canvas
+                            id="sentiment-chart"
+                        ></canvas>
+
+
+                    </article>
+
+
+
+                    <!-- SENTIMENT MIX -->
+
+                    <article class="card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <small>
+                                    SENTIMENT MIX
+                                </small>
+
+                                <h3>
+                                    Current distribution
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="sentiment-mix"
+                            class="sentiment-mix"
+                        ></div>
+
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     DRIVERS + RECENT FEEDBACK
+                ========================================== -->
+
+                <div class="dashboard-grid">
+
+
+                    <!-- DRIVERS -->
+
+                    <article class="card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <small>
+                                    TOP DRIVERS
+                                </small>
+
+                                <h3>
+                                    Customer pain points
+                                </h3>
+
+                            </div>
+
+                            <button
+                                class="text-button"
+                                data-page-target="diagnostics"
+                            >
+                                View all →
+                            </button>
+
+                        </div>
+
+
+                        <div id="drivers"></div>
+
+
+                    </article>
+
+
+
+                    <!-- RECENT FEEDBACK -->
+
+                    <article class="card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <small>
+                                    RECENT FEEDBACK
+                                </small>
+
+                                <h3>
+                                    Live customer signals
+                                </h3>
+
+                            </div>
+
+                            <span class="live-indicator">
+
+                                <i></i>
+
+                                LIVE
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            id="recent-feedback"
+                        ></div>
+
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     ALERT STRIP
+                ========================================== -->
+
+                <div class="alert-strip">
+
+
+                    <div class="alert-icon">
+                        !
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Customer support complaints increased by 12.1%
+                        </strong>
+
+                        <p>
+                            38 customers mentioned unanswered
+                            support requests in the last 7 days.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        data-page-target="diagnostics"
+                    >
+                        Investigate →
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FEEDBACK PAGE
+            ================================================== -->
+
+            <section
+                id="feedback"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+
+                    <div>
+
+                        <small>
+                            FEEDBACK EXPLORER
+                        </small>
+
+                        <h2>
+                            Customer Feedback
+                        </h2>
+
+                        <p>
+                            Search, filter and investigate
+                            individual customer reviews.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-button"
+                        id="export-feedback"
+                    >
+                        ↓ Export CSV
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- FILTERS -->
+
+                <div class="filters card">
+
+
+                    <div class="filter-group">
+
+                        <label>
+                            Search
+                        </label>
+
+                        <input
+                            id="search"
+                            type="search"
+                            placeholder="Search customer, review or topic..."
+                        >
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label>
+                            Sentiment
+                        </label>
+
+                        <select
+                            id="sentiment-filter"
+                        >
+
+                            <option value="all">
+                                All Sentiments
+                            </option>
+
+                            <option value="positive">
+                                Positive
+                            </option>
+
+                            <option value="neutral">
+                                Neutral
+                            </option>
+
+                            <option value="negative">
+                                Negative
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label>
+                            Risk
+                        </label>
+
+                        <select
+                            id="risk-filter"
+                        >
+
+                            <option value="all">
+                                All Risk
+                            </option>
+
+                            <option value="critical">
+                                Critical
+                            </option>
+
+                            <option value="high">
+                                High
+                            </option>
+
+                            <option value="medium">
+                                Medium
+                            </option>
+
+                            <option value="low">
+                                Low
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label>
+                            Product
+                        </label>
+
+                        <select
+                            id="product-filter"
+                        >
+
+                            <option value="all">
+                                All Products
+                            </option>
+
+                            <option value="Mobile App">
+                                Mobile App
+                            </option>
+
+                            <option value="Web Platform">
+                                Web Platform
+                            </option>
+
+                            <option value="Delivery">
+                                Delivery
+                            </option>
+
+                            <option value="Pricing">
+                                Pricing
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- FEEDBACK TABLE -->
+
+                <div class="card table-container">
+
+
+                    <div class="table-toolbar">
+
+                        <div>
+
+                            <strong>
+                                Feedback Records
+                            </strong>
+
+                            <span
+                                id="feedback-count"
+                                class="record-count"
+                            >
+                                8 records
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="secondary-button"
+                            id="refresh-feedback"
+                        >
+                            ↻ Refresh
+                        </button>
+
+                    </div>
+
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Customer
+                                </th>
+
+                                <th>
+                                    Feedback
+                                </th>
+
+                                <th>
+                                    Sentiment
+                                </th>
+
+                                <th>
+                                    Confidence
+                                </th>
+
+                                <th>
+                                    Risk
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="feedback-table"
+                        ></tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DIAGNOSTICS PAGE
+            ================================================== -->
+
+            <section
+                id="diagnostics"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <small>
+                        DIAGNOSTIC ENGINE
+                    </small>
+
+                    <h2>
+                        Feedback Diagnostics
+                    </h2>
+
+                    <p>
+                        Detect inconsistent, suspicious and
+                        high-risk customer feedback.
+                    </p>
+
+                </div>
+
+
+
+                <!-- DIAGNOSTIC KPIs -->
+
+                <div class="kpi-grid">
+
+
+                    <article class="kpi-card">
+
+                        <div class="kpi-top">
+
+                            <span>
+                                CONSISTENCY SCORE
+                            </span>
+
+                            <div class="kpi-icon green">
+                                ✓
+                            </div>
+
+                        </div>
+
+                        <h2>
+                            87/100
+                        </h2>
+
+                        <div class="kpi-bottom">
+
+                            <span class="positive">
+                                Healthy
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="kpi-card">
+
+                        <div class="kpi-top">
+
+                            <span>
+                                ANOMALIES
+                            </span>
+
+                            <div class="kpi-icon red">
+                                !
+                            </div>
+
+                        </div>
+
+                        <h2>
+                            24
+                        </h2>
+
+                        <div class="kpi-bottom">
+
+                            <span class="negative">
+                                6 critical
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="kpi-card">
+
+                        <div class="kpi-top">
+
+                            <span>
+                                DUPLICATES
+                            </span>
+
+                            <div class="kpi-icon">
+                                ◇
+                            </div>
+
+                        </div>
+
+                        <h2>
+                            18
+                        </h2>
+
+                        <div class="kpi-bottom">
+
+                            <span>
+                                0.14%
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="kpi-card">
+
+                        <div class="kpi-top">
+
+                            <span>
+                                OUTLIERS
+                            </span>
+
+                            <div class="kpi-icon purple">
+                                ◌
+                            </div>
+
+                        </div>
+
+                        <h2>
+                            9
+                        </h2>
+
+                        <div class="kpi-bottom">
+
+                            <span class="negative">
+                                Requires review
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- DIAGNOSTIC CONTENT -->
+
+                <div class="diagnostic-grid">
+
+
+                    <!-- CONSISTENCY -->
+
+                    <article class="card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <small>
+                                    CONSISTENCY ANALYSIS
+                                </small>
+
+                                <h3>
+                                    Review quality score
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="score-display">
+
+                            <div class="score-circle">
+
+                                <span>
+                                    87
+                                </span>
+
+                                <small>
+                                    /100
+                                </small>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Healthy feedback quality
+                                </strong>
+
+                                <p>
+                                    Most customer reviews are
+                                    internally consistent.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress large-progress">
+
+                            <div
+                                style="width:87%"
+                            ></div>
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- ANOMALIES -->
+
+                    <article class="card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <small>
+                                    ANOMALY DETECTION
+                                </small>
+
+                                <h3>
+                                    Detected patterns
+                                </h3>
+
+                            </div>
+
+                            <span class="danger-badge">
+                                4 patterns
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            id="anomalies"
+                            class="anomaly-list"
+                        ></div>
+
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- DIAGNOSTIC EXPLANATION -->
+
+                <article class="card diagnostic-explanation">
+
+
+                    <div>
+
+                        <small>
+                            HOW THE ENGINE WORKS
+                        </small>
+
+                        <h3>
+                            Multi-signal consistency analysis
+                        </h3>
+
+                    </div>
+
+
+                    <div class="diagnostic-methods">
+
+
+                        <div class="method">
+
+                            <span>
+                                01
+                            </span>
+
+                            <strong>
+                                Text Sentiment
+                            </strong>
+
+                            <p>
+                                Compares language patterns
+                                with predicted sentiment.
+                            </p>
+
+                        </div>
+
+
+                        <div class="method">
+
+                            <span>
+                                02
+                            </span>
+
+                            <strong>
+                                Rating Analysis
+                            </strong>
+
+                            <p>
+                                Detects conflicts between
+                                star ratings and review text.
+                            </p>
+
+                        </div>
+
+
+                        <div class="method">
+
+                            <span>
+                                03
+                            </span>
+
+                            <strong>
+                                Pattern Detection
+                            </strong>
+
+                            <p>
+                                Finds repeated complaints
+                                and emerging product issues.
+                            </p>
+
+                        </div>
+
+
+                        <div class="method">
+
+                            <span>
+                                04
+                            </span>
+
+                            <strong>
+                                Risk Scoring
+                            </strong>
+
+                            <p>
+                                Prioritizes feedback based
+                                on business impact.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 AI INSIGHTS
+            ================================================== -->
+
+            <section
+                id="insights"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <div>
+
+                        <small>
+                            AI PRODUCT INTELLIGENCE
+                        </small>
+
+                        <h2>
+                            Actionable Insights
+                        </h2>
+
+                        <p>
+                            Convert customer signals into
+                            product and business actions.
+                        </p>
+
+                    </div>
+
+
+                    <span class="ai-status">
+                        ✦ AI ENGINE ACTIVE
+                    </span>
+
+                </div>
+
+
+
+                <div
+                    id="insight-cards"
+                    class="insight-grid"
+                ></div>
+
+
+
+                <!-- AI SUMMARY -->
+
+                <article class="card ai-summary">
+
+
+                    <div class="ai-summary-icon">
+                        ✦
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            EXECUTIVE SUMMARY
+                        </small>
+
+                        <h3>
+                            Customer experience is healthy,
+                            but support is becoming a risk.
+                        </h3>
+
+                        <p>
+                            Overall sentiment remains positive.
+                            However, repeated support complaints
+                            and delivery delays are emerging as
+                            the strongest negative signals.
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ANALYTICS
+            ================================================== -->
+
+            <section
+                id="analytics"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <small>
+                        BUSINESS ANALYTICS
+                    </small>
+
+                    <h2>
+                        Customer Analytics
+                    </h2>
+
+                    <p>
+                        Monitor sentiment and customer
+                        experience performance.
+                    </p>
+
+                </div>
+
+
+
+                <div class="analytics-grid">
+
+
+                    <article class="card analytics-stat">
+
+                        <small>
+                            CUSTOMER SATISFACTION
+                        </small>
+
+                        <h2>
+                            84.2%
+                        </h2>
+
+                        <span class="positive">
+                            ↑ 5.6% this month
+                        </span>
+
+                    </article>
+
+
+                    <article class="card analytics-stat">
+
+                        <small>
+                            NPS SCORE
+                        </small>
+
+                        <h2>
+                            +62
+                        </h2>
+
+                        <span class="positive">
+                            ↑ 7 points
+                        </span>
+
+                    </article>
+
+
+                    <article class="card analytics-stat">
+
+                        <small>
+                            RESPONSE RATE
+                        </small>
+
+                        <h2>
+                            91.7%
+                        </h2>
+
+                        <span class="positive">
+                            ↑ 2.3%
+                        </span>
+
+                    </article>
+
+
+                    <article class="card analytics-stat">
+
+                        <small>
+                            ESCALATION RATE
+                        </small>
+
+                        <h2>
+                            3.8%
+                        </h2>
+
+                        <span class="negative">
+                            ↑ 0.9%
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <article class="card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <small>
+                                PRODUCT PERFORMANCE
+                            </small>
+
+                            <h3>
+                                Sentiment by product area
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-performance">
+
+
+                        <div class="performance-row">
+
+                            <span>
+                                Mobile App
+                            </span>
+
+                            <div class="progress">
+
+                                <div
+                                    style="width:88%"
+                                ></div>
+
+                            </div>
+
+                            <strong>
+                                88%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="performance-row">
+
+                            <span>
+                                Web Platform
+                            </span>
+
+                            <div class="progress">
+
+                                <div
+                                    style="width:91%"
+                                ></div>
+
+                            </div>
+
+                            <strong>
+                                91%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="performance-row">
+
+                            <span>
+                                Delivery
+                            </span>
+
+                            <div class="progress">
+
+                                <div
+                                    style="width:74%"
+                                ></div>
+
+                            </div>
+
+                            <strong>
+                                74%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="performance-row">
+
+                            <span>
+                                Customer Support
+                            </span>
+
+                            <div class="progress">
+
+                                <div
+                                    style="width:61%"
+                                ></div>
+
+                            </div>
+
+                            <strong>
+                                61%
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SETTINGS
+            ================================================== -->
+
+            <section
+                id="settings"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <small>
+                        SYSTEM CONFIGURATION
+                    </small>
+
+                    <h2>
+                        Settings
+                    </h2>
+
+                    <p>
+                        Configure Sentinel CX preferences.
+                    </p>
+
+                </div>
+
+
+
+                <div class="settings-grid">
+
+
+                    <article class="card settings-card">
+
+
+                        <small>
+                            ANALYSIS ENGINE
+                        </small>
+
+                        <h3>
+                            Sentiment Configuration
+                        </h3>
+
+
+                        <label class="setting-row">
+
+                            <div>
+
+                                <strong>
+                                    Automatic Analysis
+                                </strong>
+
+                                <p>
+                                    Analyze new feedback automatically.
+                                </p>
+
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                        </label>
+
+
+                        <label class="setting-row">
+
+                            <div>
+
+                                <strong>
+                                    Anomaly Detection
+                                </strong>
+
+                                <p>
+                                    Detect inconsistent feedback.
+                                </p>
+
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                        </label>
+
+
+                        <label class="setting-row">
+
+                            <div>
+
+                                <strong>
+                                    Critical Alerts
+                                </strong>
+
+                                <p>
+                                    Alert when critical feedback appears.
+                                </p>
+
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                checked
+                            >
+
+                        </label>
+
+
+                    </article>
+
+
+
+                    <article class="card settings-card">
+
+
+                        <small>
+                            DATA MANAGEMENT
+                        </small>
+
+                        <h3>
+                            Feedback Processing
+                        </h3>
+
+
+                        <label class="setting-field">
+
+                            <span>
+                                Default confidence threshold
+                            </span>
+
+                            <select>
+
+                                <option>
+                                    80%
+                                </option>
+
+                                <option selected>
+                                    90%
+                                </option>
+
+                                <option>
+                                    95%
+                                </option>
+
+                                <option>
+                                    98%
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+                        <label class="setting-field">
+
+                            <span>
+                                Default risk level
+                            </span>
+
+                            <select>
+
+                                <option selected>
+                                    Medium
+                                </option>
+
+                                <option>
+                                    High
+                                </option>
+
+                                <option>
+                                    Critical
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+                    </article>
+
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     ANALYSIS MODAL
+====================================================== -->
+
+<div
+    id="analysis-modal"
+    class="modal"
+>
+
+
+    <div class="modal-content">
+
+
+        <!-- CLOSE -->
+
+        <button
+            id="close-modal"
+            class="close"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+        <!-- HEADER -->
+
+        <div class="modal-header">
+
+            <div class="modal-icon">
+                ✦
+            </div>
+
+            <div>
+
+                <small>
+                    SENTIMENT ANALYZER
+                </small>
+
+                <h2>
+                    Analyze Customer Feedback
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- INPUT -->
+
+        <label class="modal-label">
+            Customer Feedback
+        </label>
+
+
+        <textarea
+            id="feedback-input"
+            placeholder="Paste customer feedback here..."
+        ></textarea>
+
+
+        <div class="character-count">
+            <span id="character-count">
+                0
+            </span>
+            characters
+        </div>
+
+
+        <!-- ACTION -->
+
+        <button
+            id="run-analysis"
+            class="primary-button full-width"
+        >
+            ✦ Run Diagnostic
+        </button>
+
+
+        <!-- RESULT -->
+
+        <div
+            id="analysis-result"
+            class="analysis-result"
+        ></div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     NOTIFICATION PANEL
+====================================================== -->
+
+<div
+    id="notification-panel"
+    class="notification-panel"
+>
+
+
+    <div class="notification-header">
+
+        <strong>
+            Notifications
+        </strong>
+
+        <button
+            id="close-notifications"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="notification-item critical">
+
+        <span>
+            !
+        </span>
+
+        <div>
+
+            <strong>
+                Critical feedback
+            </strong>
+
+            <p>
+                6 new critical reviews detected.
+            </p>
+
+            <small>
+                8 minutes ago
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <span>
+            ↑
+        </span>
+
+        <div>
+
+            <strong>
+                Sentiment improved
+            </strong>
+
+            <p>
+                Positive sentiment increased by 4.2%.
+            </p>
+
+            <small>
+                32 minutes ago
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <span>
+            ✦
+        </span>
+
+        <div>
+
+            <strong>
+                AI insight ready
+            </strong>
+
+            <p>
+                New product recommendation generated.
+            </p>
+
+            <small>
+                1 hour ago
+            </small>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     GLOBAL SEARCH
+====================================================== -->
+
+<div
+    id="search-overlay"
+    class="search-overlay"
+>
+
+
+    <div class="global-search">
+
+
+        <button
+            id="close-search"
+            class="close"
+        >
+            ×
+        </button>
+
+
+        <small>
+            GLOBAL SEARCH
+        </small>
+
+
+        <h2>
+            Search Sentinel CX
+        </h2>
+
+
+        <input
+            id="global-search-input"
+            type="search"
+            placeholder="Search feedback, customers, topics..."
+        >
+
+
+        <div
+            id="global-search-results"
+            class="search-results"
+        ></div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script
+    src="js/app.js"
+></script>
+
+
+</body>
+
+</html>
