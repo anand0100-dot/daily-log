@@ -1,2241 +1,742 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- =========================================
-         META
-    ========================================== -->
+  <title>Anand Tiwari — Aspiring DevOps Engineer</title>
 
-    <meta charset="UTF-8">
+  <meta name="description" content="Portfolio of Anand Tiwari — Aspiring DevOps Engineer and MCA Cloud Computing & DevOps student. Exploring Linux, Docker, Jenkins, AWS, Azure and CI/CD automation.">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <meta name="theme-color" content="#F2F0E9">
 
-    <meta
-        name="description"
-        content="Sentinel CX - Customer Feedback Sentiment Diagnostic System"
-    >
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2322263A'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='24' font-weight='700' fill='white' text-anchor='middle'%3EAT%3C/text%3E%3C/svg%3E">
 
-    <meta
-        name="theme-color"
-        content="#6657e8"
-    >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <title>
-        Sentinel CX | Customer Intelligence
-    </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="style.css">
 
-    <!-- =========================================
-         STYLESHEET
-    ========================================== -->
+  <script>
+    (function () {
+      var root = document.documentElement, theme = null;
+      root.classList.add('js');
 
-    <link
-        rel="stylesheet"
-        href="css/styles.css"
-    >
+      try {
+        theme = localStorage.getItem('theme');
+      } catch (e) {}
 
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      root.dataset.theme = theme;
+
+      if (theme === 'dark') {
+        document.querySelector('meta[name="theme-color"]').content = '#0A1322';
+      }
+    })();
+  </script>
 </head>
-
 
 <body>
 
+  <!-- TOP BAR -->
+  <header class="topbar" id="topbar">
 
-<!-- =====================================================
-     APPLICATION
-====================================================== -->
+    <a href="#home" class="brand" aria-label="Back to top">
+      <span class="badge" data-bind="initials">AT</span>
+      <span class="brand-name" data-bind="name">Anand Tiwari</span>
+    </a>
 
-<div id="app">
+    <nav class="nav" aria-label="Primary">
+      <a href="#about" data-nav="about">About</a>
+      <a href="#skills" data-nav="skills">Skills</a>
+      <a href="#work" data-nav="work">Work</a>
+      <a href="#journey" data-nav="journey">Experience</a>
+      <a href="#achievements" data-nav="achievements">Achievements</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
 
+    <button class="theme-toggle" id="themeToggle" type="button"
+      aria-label="Switch to dark theme" title="Switch to dark theme">
 
-    <!-- =================================================
-         SIDEBAR
-    ================================================== -->
+      <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18"
+        fill="none" stroke="currentColor" stroke-width="1.7"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8Z"/>
+      </svg>
 
-    <aside
-        class="sidebar"
-        id="sidebar"
-    >
+      <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18"
+        fill="none" stroke="currentColor" stroke-width="1.7"
+        stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2"/>
+        <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M5.4 18.6l1.5-1.5M17.1 6.9l1.5-1.5"/>
+      </svg>
 
+    </button>
+  </header>
 
-        <!-- BRAND -->
+  <main>
 
-        <div class="brand">
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
 
-            <div class="logo">
-                S
-            </div>
+      <div class="hero-name" aria-hidden="true">ANAND</div>
 
+      <div class="hero-figure">
 
-            <div class="brand-text">
+        <video class="hero-video" muted loop playsinline
+          preload="auto" hidden></video>
 
-                <h2>
-                    Sentinel CX
-                </h2>
+        <svg class="hero-svg" viewBox="0 0 320 800"
+          role="img" aria-label="Illustrated character of Anand">
 
-                <span>
-                    Feedback Intelligence
-                </span>
+          <defs>
+            <linearGradient id="gSkin" x1="0" x2="1">
+              <stop offset="0" stop-color="#D4A485"/>
+              <stop offset="1" stop-color="#B98463"/>
+            </linearGradient>
 
-            </div>
+            <linearGradient id="gTee" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#96313D"/>
+              <stop offset="1" stop-color="#6A1B26"/>
+            </linearGradient>
+
+            <linearGradient id="gSleeveL" x1="0" x2="1">
+              <stop offset="0" stop-color="#76202B"/>
+              <stop offset="1" stop-color="#93303B"/>
+            </linearGradient>
+
+            <linearGradient id="gSleeveR" x1="0" x2="1">
+              <stop offset="0" stop-color="#862833"/>
+              <stop offset="1" stop-color="#621922"/>
+            </linearGradient>
+
+            <linearGradient id="gPants" x1="0" x2="1">
+              <stop offset="0" stop-color="#4A4E61"/>
+              <stop offset=".55" stop-color="#3A3E50"/>
+              <stop offset="1" stop-color="#2A2D3C"/>
+            </linearGradient>
+
+            <linearGradient id="gHair" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2E2727"/>
+              <stop offset="1" stop-color="#151213"/>
+            </linearGradient>
+
+            <linearGradient id="gShoe" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FFFFFF"/>
+              <stop offset="1" stop-color="#E9E6DF"/>
+            </linearGradient>
+
+            <radialGradient id="gShadow">
+              <stop offset="0" stop-color="#1D2032" stop-opacity=".24"/>
+              <stop offset="1" stop-color="#1D2032" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <ellipse cx="160" cy="762" rx="124" ry="14" fill="url(#gShadow)"/>
+
+          <!-- LEGS -->
+          <path d="M104 392 H216 C223 470 229 600 235 742 L171 744 C169 640 165 540 160 472 C155 540 151 640 149 744 L85 742 C91 600 97 470 104 392 Z" fill="url(#gPants)"/>
+
+          <path d="M160 472 C155 540 151 640 149 744 L141 744 C146 640 151 540 158 470 Z"
+            fill="#000" opacity=".14"/>
+
+          <path d="M119 476 C117 566 115 656 113 738 M201 476 C203 566 205 656 207 738"
+            stroke="#fff" stroke-opacity=".07" stroke-width="2" fill="none"/>
+
+          <!-- SHOES -->
+          <path d="M86 736 C100 730 140 730 151 736 L153 754 C130 763 96 764 76 758 C74 749 78 740 86 736 Z"
+            fill="url(#gShoe)"/>
+
+          <path d="M76 756 C96 763 132 763 153 754 L153 760 C132 768 94 769 76 762 Z"
+            fill="#CFCBC2"/>
+
+          <path d="M234 736 C220 730 180 730 169 736 L167 754 C190 763 224 764 244 758 C246 749 242 740 234 736 Z"
+            fill="url(#gShoe)"/>
+
+          <path d="M244 756 C224 763 188 763 167 754 L167 760 C188 768 226 769 244 762 Z"
+            fill="#CFCBC2"/>
+
+          <!-- UPPER BODY -->
+          <g id="c-upper" class="c-upper">
+
+            <path d="M145 122 H175 L177 166 C168 176 152 176 143 166 Z"
+              fill="#AF7A57"/>
+
+            <path d="M112 168 C124 162 133 160 139 159 C146 177 174 177 181 159 C187 160 196 162 208 168 C222 174 228 186 228 200 L225 410 C200 417 120 417 95 410 L92 200 C92 186 98 174 112 168 Z"
+              fill="url(#gTee)"/>
+
+            <path d="M95 410 L92 200 C92 190 95 182 100 177 C102 250 106 330 112 414 Z"
+              fill="#000" opacity=".07"/>
+
+            <path d="M225 410 L228 200 C228 190 225 182 220 177 C218 250 214 330 208 414 Z"
+              fill="#000" opacity=".13"/>
+
+            <path d="M118 396 C126 390 136 392 142 398 M178 398 C186 391 196 391 204 397"
+              stroke="#4E111B" stroke-opacity=".45" stroke-width="1.4" fill="none"/>
+
+            <path d="M95 404 C120 411 200 411 225 404"
+              stroke="#4E111B" stroke-opacity=".5" stroke-width="2" fill="none"/>
+
+            <path d="M139 159 C146 177 174 177 181 159"
+              stroke="#57141E" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+            <text x="161" y="282" transform="rotate(-6 161 282)"
+              text-anchor="middle" font-family="'Instrument Serif', Georgia, serif"
+              font-style="italic" font-size="17" letter-spacing=".3"
+              fill="#F6EEE8">simple things</text>
+
+            <!-- HEAD -->
+            <g class="c-head">
+
+              <ellipse cx="123" cy="100" rx="7" ry="11" fill="#BE8A68"/>
+              <ellipse cx="197" cy="100" rx="7" ry="11" fill="#AE7956"/>
+
+              <path d="M122 92 C122 52 198 52 198 92 C198 122 186 142 160 146 C134 142 122 122 122 92 Z"
+                fill="url(#gSkin)"/>
+
+              <!-- BEARD -->
+              <path d="M121 95 C122 124 135 151 160 154 C185 151 198 124 199 95 C197 110 192 120 185 125 C178 119 170 116 160 117 C150 116 142 119 135 125 C128 120 123 110 121 95 Z"
+                fill="#2A201D"/>
+
+              <path d="M148.5 126.5 Q160 135.5 171.5 126.5 Q160 130.5 148.5 126.5 Z"
+                fill="#F3E7E0"/>
+
+              <path d="M160 100 C158 108 156 113 159 115 C161 116 164 115 165 113"
+                stroke="#9C6848" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+              <g class="c-eyes">
+                <ellipse cx="145" cy="97" rx="3.4" ry="4.3" fill="#1B1A1F"/>
+                <ellipse cx="175" cy="97" rx="3.4" ry="4.3" fill="#1B1A1F"/>
+                <circle cx="146.3" cy="95.5" r="1" fill="#fff"/>
+                <circle cx="176.3" cy="95.5" r="1" fill="#fff"/>
+              </g>
+
+              <path d="M134 84 Q144 78 155 82 M165 82 Q176 78 186 84"
+                stroke="#201918" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+              <!-- HAIR -->
+              <path d="M122 95 C117 82 115 66 118 54 C120 44 126 36 133 31 C137 24 145 20 152 20 C157 15 166 13 173 15 C181 13 192 17 198 24 C206 31 211 44 209 58 C208 70 204 82 200 93 C198 83 195 76 191 71 C185 66 178 64 171 65 C166 61 158 60 152 63 C144 63 136 66 130 71 C126 77 124 85 123 95 Z"
+                fill="url(#gHair)"/>
+
+              <path d="M134 33 C146 21 168 15 190 20 C176 20 158 23 142 36 Z"
+                fill="#4A4040" opacity=".6"/>
+
+              <path d="M140 40 C152 30 166 26 180 27 M150 47 C160 39 172 36 186 37 M131 53 C139 45 147 41 155 39"
+                stroke="#5A4E4E" stroke-width="1.3" stroke-linecap="round"
+                fill="none" opacity=".55"/>
+
+              <path d="M123 95 C121 87 121 79 124 72 L127.5 74 C125.5 80 124.5 87 124.5 95 Z M197 95 C199 87 199 79 196 72 L192.5 74 C194.5 80 195.5 87 195.5 95 Z"
+                fill="#3B3232" opacity=".55"/>
+
+              <!-- GLASSES -->
+              <g fill="#FFFFFF" fill-opacity=".1" stroke="#B5BAC1" stroke-width="1.8">
+                <circle cx="145" cy="97" r="12.5"/>
+                <circle cx="175" cy="97" r="12.5"/>
+              </g>
+
+              <path d="M157.5 95 Q160 92 162.5 95 M132.5 95 L122 92 M187.5 95 L198 92"
+                stroke="#B5BAC1" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+
+              <path d="M137 90.5 A9 9 0 0 1 144 86.5 M167 90.5 A9 9 0 0 1 174 86.5"
+                stroke="#fff" stroke-opacity=".7" stroke-width="1.2"
+                stroke-linecap="round" fill="none"/>
+
+            </g>
+          </g>
+
+          <!-- LEFT ARM -->
+          <g class="c-arm c-arm-l">
+
+            <path d="M78 248 C75 300 73 360 73 410 C80 416 92 416 98 410 C99 360 103 300 110 250 Z"
+              fill="url(#gSkin)"/>
+
+            <path d="M73 406 C70 424 74 441 84 446 C95 449 101 433 98 406 Z"
+              fill="url(#gSkin)"/>
+
+            <path d="M98 176 C83 185 77 214 75 258 C86 266 104 265 113 257 L114 212 C113 199 110 188 105 181 Z"
+              fill="url(#gSleeveL)"/>
+
+            <path d="M75 252 C86 260 104 259 113 251"
+              stroke="#4E111B" stroke-opacity=".55" stroke-width="2" fill="none"/>
+
+          </g>
+
+          <!-- RIGHT ARM -->
+          <g class="c-arm c-arm-r">
+
+            <path d="M242 248 C245 300 247 360 247 410 C240 416 228 416 222 410 C221 360 217 300 210 250 Z"
+              fill="url(#gSkin)"/>
+
+            <path d="M247 406 C250 424 246 441 236 446 C225 449 219 433 222 406 Z"
+              fill="url(#gSkin)"/>
+
+            <path d="M222 176 C237 185 243 214 245 258 C234 266 216 265 207 257 L206 212 C207 199 210 188 215 181 Z"
+              fill="url(#gSleeveR)"/>
+
+            <path d="M245 252 C234 260 216 259 207 251"
+              stroke="#4E111B" stroke-opacity=".55" stroke-width="2" fill="none"/>
+
+            <path d="M229 226 l7 -3 M230 233 l7 -3"
+              stroke="#F6EEE8" stroke-opacity=".8" stroke-width="1.6"
+              stroke-linecap="round"/>
+
+          </g>
+
+        </svg>
+      </div>
+
+      <button class="pause" type="button" aria-label="Pause animation" aria-pressed="false">
+
+        <svg class="i-pause" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+          <rect x="6" y="5" width="4" height="14" rx="1.2" fill="currentColor"/>
+          <rect x="14" y="5" width="4" height="14" rx="1.2" fill="currentColor"/>
+        </svg>
+
+        <svg class="i-play" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+          <path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"
+            fill="currentColor"/>
+        </svg>
+
+      </button>
+
+      <div class="hero-copy">
+
+        <p class="eyebrow" data-bind="name">Anand Tiwari</p>
+
+        <!-- UPDATED HERO TITLE -->
+        <h1 class="hero-title lines-2">
+          <span>Aspiring</span>
+          <span>Aspiring DevOps Engineer<i class="dot">.</i></span>
+        </h1>
+
+        <p class="hero-sub" data-bind="tagline"></p>
+
+      </div>
+
+      <div class="hero-cta">
+
+        <a class="btn btn-dark" href="#work">
+          Explore work <span class="arr">→</span>
+        </a>
+
+        <div class="row">
+
+          <a class="btn btn-ghost" href="#contact">Let's talk</a>
+
+          <a class="btn btn-ghost js-resume" href="#" download hidden>
+            Resume <span class="arr">↓</span>
+          </a>
+
+          <a class="btn btn-ghost js-github" href="#" target="_blank" rel="noopener">
+            GitHub <span class="arr">↗</span>
+          </a>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about" id="about">
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <p class="label" data-reveal>
+            <span>01</span><span class="rule"></span><span>About</span>
+          </p>
+
+          <h2 class="h2 split" data-split>
+            Hi, I'm <em class="js-first">Anand.</em>
+          </h2>
+
+          <p class="lead" data-reveal id="aboutLead"></p>
+          <p class="muted" data-reveal id="aboutMore"></p>
+
+          <div class="btn-row" data-reveal id="aboutBtns"></div>
 
         </div>
 
+        <!-- DEVELOPER ID CARD -->
+        <div class="lanyard" id="lanyard">
 
-        <!-- NAVIGATION -->
+          <div class="swing" id="swing">
 
-        <nav
-            class="main-navigation"
-            aria-label="Main navigation"
-        >
+            <div class="strap"></div>
+            <div class="clip"></div>
 
+            <div class="idcard" id="idcard"
+              role="button" tabindex="0" aria-pressed="false"
+              aria-label="Developer ID card — press to flip">
 
-            <button
-                class="nav-item active"
-                data-page="dashboard"
-            >
+              <div class="id-tilt" id="idTilt">
 
-                <span class="nav-icon">
-                    ◈
-                </span>
+                <div class="id-flip" id="idFlip">
 
-                <span>
-                    Dashboard
-                </span>
+                  <!-- FRONT -->
+                  <div class="id-face id-front">
 
-            </button>
+                    <div class="id-head">
 
+                      <span class="id-logo" data-bind="initials">AT</span>
 
-            <button
-                class="nav-item"
-                data-page="feedback"
-            >
-
-                <span class="nav-icon">
-                    ▤
-                </span>
-
-                <span>
-                    Feedback
-                </span>
-
-            </button>
-
-
-            <button
-                class="nav-item"
-                data-page="diagnostics"
-            >
-
-                <span class="nav-icon">
-                    ◉
-                </span>
-
-                <span>
-                    Diagnostics
-                </span>
-
-            </button>
-
-
-            <button
-                class="nav-item"
-                data-page="insights"
-            >
-
-                <span class="nav-icon">
-                    ✦
-                </span>
-
-                <span>
-                    AI Insights
-                </span>
-
-            </button>
-
-
-            <button
-                class="nav-item"
-                data-page="analytics"
-            >
-
-                <span class="nav-icon">
-                    ◫
-                </span>
-
-                <span>
-                    Analytics
-                </span>
-
-            </button>
-
-
-            <button
-                class="nav-item"
-                data-page="settings"
-            >
-
-                <span class="nav-icon">
-                    ⚙
-                </span>
-
-                <span>
-                    Settings
-                </span>
-
-            </button>
-
-
-        </nav>
-
-
-        <!-- SIDEBAR BOTTOM -->
-
-        <div class="sidebar-bottom">
-
-
-            <!-- SYSTEM STATUS -->
-
-            <div class="system-status">
-
-                <small>
-                    SYSTEM STATUS
-                </small>
-
-                <p>
-                    <span class="status-dot"></span>
-                    All systems operational
-                </p>
-
-                <span>
-                    Sentiment Engine v1.0
-                </span>
-
-            </div>
-
-
-            <!-- USER -->
-
-            <div class="sidebar-user">
-
-                <div class="avatar">
-                    AT
-                </div>
-
-                <div>
-
-                    <strong>
-                        Anand Tiwari
-                    </strong>
-
-                    <small>
-                        Administrator
-                    </small>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-    </aside>
-
-
-
-    <!-- =================================================
-         MAIN CONTENT
-    ================================================== -->
-
-    <main class="main">
-
-
-        <!-- =============================================
-             TOPBAR
-        ============================================== -->
-
-        <header class="topbar">
-
-
-            <!-- MOBILE MENU -->
-
-            <button
-                class="mobile-menu"
-                id="mobile-menu"
-                aria-label="Open menu"
-            >
-                ☰
-            </button>
-
-
-            <!-- PAGE INFORMATION -->
-
-            <div class="page-information">
-
-                <small id="breadcrumb">
-                    CUSTOMER EXPERIENCE
-                </small>
-
-                <h1 id="page-title">
-                    Feedback Overview
-                </h1>
-
-            </div>
-
-
-            <!-- TOPBAR ACTIONS -->
-
-            <div class="header-actions">
-
-
-                <!-- SEARCH -->
-
-                <button
-                    class="icon-button"
-                    id="global-search-button"
-                    title="Search"
-                >
-                    ⌕
-                </button>
-
-
-                <!-- NOTIFICATIONS -->
-
-                <button
-                    class="icon-button notification-button"
-                    id="notification-button"
-                    title="Notifications"
-                >
-
-                    ♢
-
-                    <span class="notification-badge">
-                        3
-                    </span>
-
-                </button>
-
-
-                <!-- THEME -->
-
-                <button
-                    class="icon-button"
-                    id="theme-btn"
-                    title="Toggle theme"
-                >
-                    🌙
-                </button>
-
-
-                <!-- ANALYZE -->
-
-                <button
-                    class="primary-button"
-                    id="analyze-btn"
-                >
-
-                    <span>
-                        +
-                    </span>
-
-                    Analyze Feedback
-
-                </button>
-
-
-                <!-- USER -->
-
-                <div class="top-avatar">
-                    AT
-                </div>
-
-
-            </div>
-
-
-        </header>
-
-
-
-        <!-- =============================================
-             PAGE CONTAINER
-        ============================================== -->
-
-        <section class="content">
-
-
-            <!-- =================================================
-                 DASHBOARD
-            ================================================== -->
-
-            <section
-                id="dashboard"
-                class="page active"
-            >
-
-
-                <!-- HERO -->
-
-                <div class="hero">
-
-
-                    <div class="hero-content">
-
-
-                        <span class="hero-label">
-                            CUSTOMER INTELLIGENCE PLATFORM
-                        </span>
-
-
-                        <h2>
-                            Understand what your
-                            customers really feel.
-                        </h2>
-
-
-                        <p>
-
-                            Detect sentiment, identify
-                            product issues, uncover
-                            inconsistent reviews and
-                            convert customer feedback
-                            into actionable insights.
-
-                        </p>
-
-
-                        <div class="hero-actions">
-
-                            <button
-                                class="hero-primary"
-                                id="hero-analyze"
-                            >
-                                Analyze Feedback
-                            </button>
-
-
-                            <button
-                                class="hero-secondary"
-                                data-page-target="feedback"
-                            >
-                                Explore Feedback →
-                            </button>
-
-                        </div>
-
+                      <div>
+                        <div class="id-title">DEVELOPER ID</div>
+                        <div class="id-sub" id="idIssued">Portfolio · 2026</div>
+                      </div>
 
                     </div>
 
+                    <div class="id-photo" id="idPhoto">
+                      <svg viewBox="96 24 128 150" aria-hidden="true">
+                        <use href="#c-upper"/>
+                      </svg>
+                    </div>
 
-                    <div class="hero-visual">
+                    <div class="id-name" data-bind="name">Anand Tiwari</div>
 
+                    <!-- UPDATED DEVELOPER ROLE -->
+                    <div class="id-role" data-bind="role">
+                      Aspiring DevOps Engineer
+                    </div>
 
-                        <div class="signal-orbit">
+                    <div class="id-meta">
 
-                            <div class="orbit orbit-one"></div>
+                      <div>
+                        <small>ID No.</small>
+                        <b id="idNo">AT-0001</b>
+                      </div>
 
-                            <div class="orbit orbit-two"></div>
+                      <div>
+                        <small>Dept</small>
+                        <b id="idDept">MCA</b>
+                      </div>
 
-                            <div class="orbit-core">
-
-                                <span>
-                                    94.6%
-                                </span>
-
-                                <small>
-                                    AI CONFIDENCE
-                                </small>
-
-                            </div>
-
-                        </div>
-
+                      <div>
+                        <small>Valid till</small>
+                        <b id="idValid">2027</b>
+                      </div>
 
                     </div>
 
-
-                </div>
-
-
-
-                <!-- =========================================
-                     KPI CARDS
-                ========================================== -->
-
-                <div class="kpi-grid">
-
-
-                    <!-- TOTAL REVIEWS -->
-
-                    <article class="kpi-card">
-
-                        <div class="kpi-top">
-
-                            <span>
-                                TOTAL REVIEWS
-                            </span>
-
-                            <div class="kpi-icon">
-                                ◉
-                            </div>
-
-                        </div>
-
-
-                        <h2 id="total-reviews">
-                            12,840
-                        </h2>
-
-
-                        <div class="kpi-bottom">
-
-                            <span class="positive">
-                                ↑ 18.4%
-                            </span>
-
-                            <small>
-                                vs last month
-                            </small>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- POSITIVE -->
-
-                    <article class="kpi-card">
-
-                        <div class="kpi-top">
-
-                            <span>
-                                POSITIVE SENTIMENT
-                            </span>
-
-                            <div class="kpi-icon green">
-                                ↑
-                            </div>
-
-                        </div>
-
-
-                        <h2>
-                            72.8%
-                        </h2>
-
-
-                        <div class="kpi-bottom">
-
-                            <span class="positive">
-                                ↑ 4.2%
-                            </span>
-
-                            <small>
-                                vs last month
-                            </small>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- CRITICAL -->
-
-                    <article class="kpi-card">
-
-                        <div class="kpi-top">
-
-                            <span>
-                                CRITICAL SIGNALS
-                            </span>
-
-                            <div class="kpi-icon red">
-                                !
-                            </div>
-
-                        </div>
-
-
-                        <h2 id="critical-signals">
-                            184
-                        </h2>
-
-
-                        <div class="kpi-bottom">
-
-                            <span class="negative">
-                                ↑ 12.1%
-                            </span>
-
-                            <small>
-                                needs attention
-                            </small>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- CONFIDENCE -->
-
-                    <article class="kpi-card">
-
-                        <div class="kpi-top">
-
-                            <span>
-                                MODEL CONFIDENCE
-                            </span>
-
-                            <div class="kpi-icon purple">
-                                ✦
-                            </div>
-
-                        </div>
-
-
-                        <h2>
-                            94.6%
-                        </h2>
-
-
-                        <div class="kpi-bottom">
-
-                            <span class="positive">
-                                ↑ 1.8%
-                            </span>
-
-                            <small>
-                                model accuracy
-                            </small>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-
-
-                <!-- =========================================
-                     CHART SECTION
-                ========================================== -->
-
-                <div class="dashboard-grid">
-
-
-                    <!-- SENTIMENT TREND -->
-
-                    <article class="card chart-card">
-
-
-                        <div class="card-header">
-
-
-                            <div>
-
-                                <small>
-                                    SENTIMENT TREND
-                                </small>
-
-                                <h3>
-                                    Customer mood over time
-                                </h3>
-
-                            </div>
-
-
-                            <select
-                                id="chart-period"
-                                class="chart-select"
-                            >
-
-                                <option>
-                                    Last 7 days
-                                </option>
-
-                                <option>
-                                    Last 30 days
-                                </option>
-
-                                <option>
-                                    Last 90 days
-                                </option>
-
-                            </select>
-
-
-                        </div>
-
-
-                        <div class="chart-legend">
-
-                            <span>
-                                <i class="legend-dot positive-dot"></i>
-                                Positive
-                            </span>
-
-                            <span>
-                                <i class="legend-dot negative-dot"></i>
-                                Negative
-                            </span>
-
-                        </div>
-
-
-                        <canvas
-                            id="sentiment-chart"
-                        ></canvas>
-
-
-                    </article>
-
-
-
-                    <!-- SENTIMENT MIX -->
-
-                    <article class="card">
-
-
-                        <div class="card-header">
-
-                            <div>
-
-                                <small>
-                                    SENTIMENT MIX
-                                </small>
-
-                                <h3>
-                                    Current distribution
-                                </h3>
-
-                            </div>
-
-                        </div>
-
-
-                        <div
-                            id="sentiment-mix"
-                            class="sentiment-mix"
-                        ></div>
-
-
-                    </article>
-
-
-                </div>
-
-
-
-                <!-- =========================================
-                     DRIVERS + RECENT FEEDBACK
-                ========================================== -->
-
-                <div class="dashboard-grid">
-
-
-                    <!-- DRIVERS -->
-
-                    <article class="card">
-
-
-                        <div class="card-header">
-
-                            <div>
-
-                                <small>
-                                    TOP DRIVERS
-                                </small>
-
-                                <h3>
-                                    Customer pain points
-                                </h3>
-
-                            </div>
-
-                            <button
-                                class="text-button"
-                                data-page-target="diagnostics"
-                            >
-                                View all →
-                            </button>
-
-                        </div>
-
-
-                        <div id="drivers"></div>
-
-
-                    </article>
-
-
-
-                    <!-- RECENT FEEDBACK -->
-
-                    <article class="card">
-
-
-                        <div class="card-header">
-
-                            <div>
-
-                                <small>
-                                    RECENT FEEDBACK
-                                </small>
-
-                                <h3>
-                                    Live customer signals
-                                </h3>
-
-                            </div>
-
-                            <span class="live-indicator">
-
-                                <i></i>
-
-                                LIVE
-
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            id="recent-feedback"
-                        ></div>
-
-
-                    </article>
-
-
-                </div>
-
-
-
-                <!-- =========================================
-                     ALERT STRIP
-                ========================================== -->
-
-                <div class="alert-strip">
-
-
-                    <div class="alert-icon">
-                        !
+                    <div class="id-foot">
+                      <div class="barcode" id="barcode" aria-hidden="true"></div>
+                      <span class="holo" aria-hidden="true"></span>
                     </div>
 
+                  </div>
 
-                    <div>
+                  <!-- BACK -->
+                  <div class="id-face id-back" aria-hidden="true">
 
-                        <strong>
-                            Customer support complaints increased by 12.1%
-                        </strong>
+                    <div class="idb-title">Scan · GitHub</div>
 
-                        <p>
-                            38 customers mentioned unanswered
-                            support requests in the last 7 days.
-                        </p>
+                    <div class="idb-qr" id="idQr"></div>
+
+                    <a class="idb-url" id="idUrl" href="#"
+                      target="_blank" rel="noopener" tabindex="-1">
+                      github.com
+                    </a>
+
+                    <div class="idb-rows">
+
+                      <div>
+                        <small>Cloud</small>
+                        <b>AWS · Linux</b>
+                      </div>
+
+                      <div>
+                        <small>Ships with</small>
+                        <b>Jenkins · Docker</b>
+                      </div>
 
                     </div>
 
-
-                    <button
-                        data-page-target="diagnostics"
-                    >
-                        Investigate →
-                    </button>
-
-
-                </div>
-
-
-            </section>
-
-
-
-            <!-- =================================================
-                 FEEDBACK PAGE
-            ================================================== -->
-
-            <section
-                id="feedback"
-                class="page"
-            >
-
-
-                <div class="page-header">
-
-
-                    <div>
-
-                        <small>
-                            FEEDBACK EXPLORER
-                        </small>
-
-                        <h2>
-                            Customer Feedback
-                        </h2>
-
-                        <p>
-                            Search, filter and investigate
-                            individual customer reviews.
-                        </p>
-
-                    </div>
-
-
-                    <button
-                        class="primary-button"
-                        id="export-feedback"
-                    >
-                        ↓ Export CSV
-                    </button>
-
-
-                </div>
-
-
-
-                <!-- FILTERS -->
-
-                <div class="filters card">
-
-
-                    <div class="filter-group">
-
-                        <label>
-                            Search
-                        </label>
-
-                        <input
-                            id="search"
-                            type="search"
-                            placeholder="Search customer, review or topic..."
-                        >
-
-                    </div>
-
-
-                    <div class="filter-group">
-
-                        <label>
-                            Sentiment
-                        </label>
-
-                        <select
-                            id="sentiment-filter"
-                        >
-
-                            <option value="all">
-                                All Sentiments
-                            </option>
-
-                            <option value="positive">
-                                Positive
-                            </option>
-
-                            <option value="neutral">
-                                Neutral
-                            </option>
-
-                            <option value="negative">
-                                Negative
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="filter-group">
-
-                        <label>
-                            Risk
-                        </label>
-
-                        <select
-                            id="risk-filter"
-                        >
-
-                            <option value="all">
-                                All Risk
-                            </option>
-
-                            <option value="critical">
-                                Critical
-                            </option>
-
-                            <option value="high">
-                                High
-                            </option>
-
-                            <option value="medium">
-                                Medium
-                            </option>
-
-                            <option value="low">
-                                Low
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="filter-group">
-
-                        <label>
-                            Product
-                        </label>
-
-                        <select
-                            id="product-filter"
-                        >
-
-                            <option value="all">
-                                All Products
-                            </option>
-
-                            <option value="Mobile App">
-                                Mobile App
-                            </option>
-
-                            <option value="Web Platform">
-                                Web Platform
-                            </option>
-
-                            <option value="Delivery">
-                                Delivery
-                            </option>
-
-                            <option value="Pricing">
-                                Pricing
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- FEEDBACK TABLE -->
-
-                <div class="card table-container">
-
-
-                    <div class="table-toolbar">
-
-                        <div>
-
-                            <strong>
-                                Feedback Records
-                            </strong>
-
-                            <span
-                                id="feedback-count"
-                                class="record-count"
-                            >
-                                8 records
-                            </span>
-
-                        </div>
-
-
-                        <button
-                            class="secondary-button"
-                            id="refresh-feedback"
-                        >
-                            ↻ Refresh
-                        </button>
-
-                    </div>
-
-
-                    <table>
-
-                        <thead>
-
-                            <tr>
-
-                                <th>
-                                    Customer
-                                </th>
-
-                                <th>
-                                    Feedback
-                                </th>
-
-                                <th>
-                                    Sentiment
-                                </th>
-
-                                <th>
-                                    Confidence
-                                </th>
-
-                                <th>
-                                    Risk
-                                </th>
-
-                                <th>
-                                    Action
-                                </th>
-
-                            </tr>
-
-                        </thead>
-
-
-                        <tbody
-                            id="feedback-table"
-                        ></tbody>
-
-
-                    </table>
-
-
-                </div>
-
-
-            </section>
-
-
-
-            <!-- =================================================
-                 DIAGNOSTICS PAGE
-            ================================================== -->
-
-            <section
-                id="diagnostics"
-                class="page"
-            >
-
-
-                <div class="page-header">
-
-                    <small>
-                        DIAGNOSTIC ENGINE
-                    </small>
-
-                    <h2>
-                        Feedback Diagnostics
-                    </h2>
-
-                    <p>
-                        Detect inconsistent, suspicious and
-                        high-risk customer feedback.
+                    <p class="idb-note">
+                      If found, please return to its developer.
                     </p>
 
-                </div>
+                    <div class="idb-sign">
 
+                      <div>
+                        <span class="sig" data-bind="name">Anand Tiwari</span>
+                        <small>Authorised signature</small>
+                      </div>
 
-
-                <!-- DIAGNOSTIC KPIs -->
-
-                <div class="kpi-grid">
-
-
-                    <article class="kpi-card">
-
-                        <div class="kpi-top">
-
-                            <span>
-                                CONSISTENCY SCORE
-                            </span>
-
-                            <div class="kpi-icon green">
-                                ✓
-                            </div>
-
-                        </div>
-
-                        <h2>
-                            87/100
-                        </h2>
-
-                        <div class="kpi-bottom">
-
-                            <span class="positive">
-                                Healthy
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="kpi-card">
-
-                        <div class="kpi-top">
-
-                            <span>
-                                ANOMALIES
-                            </span>
-
-                            <div class="kpi-icon red">
-                                !
-                            </div>
-
-                        </div>
-
-                        <h2>
-                            24
-                        </h2>
-
-                        <div class="kpi-bottom">
-
-                            <span class="negative">
-                                6 critical
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="kpi-card">
-
-                        <div class="kpi-top">
-
-                            <span>
-                                DUPLICATES
-                            </span>
-
-                            <div class="kpi-icon">
-                                ◇
-                            </div>
-
-                        </div>
-
-                        <h2>
-                            18
-                        </h2>
-
-                        <div class="kpi-bottom">
-
-                            <span>
-                                0.14%
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <article class="kpi-card">
-
-                        <div class="kpi-top">
-
-                            <span>
-                                OUTLIERS
-                            </span>
-
-                            <div class="kpi-icon purple">
-                                ◌
-                            </div>
-
-                        </div>
-
-                        <h2>
-                            9
-                        </h2>
-
-                        <div class="kpi-bottom">
-
-                            <span class="negative">
-                                Requires review
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-
-
-                <!-- DIAGNOSTIC CONTENT -->
-
-                <div class="diagnostic-grid">
-
-
-                    <!-- CONSISTENCY -->
-
-                    <article class="card">
-
-
-                        <div class="card-header">
-
-                            <div>
-
-                                <small>
-                                    CONSISTENCY ANALYSIS
-                                </small>
-
-                                <h3>
-                                    Review quality score
-                                </h3>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="score-display">
-
-                            <div class="score-circle">
-
-                                <span>
-                                    87
-                                </span>
-
-                                <small>
-                                    /100
-                                </small>
-
-                            </div>
-
-
-                            <div>
-
-                                <strong>
-                                    Healthy feedback quality
-                                </strong>
-
-                                <p>
-                                    Most customer reviews are
-                                    internally consistent.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="progress large-progress">
-
-                            <div
-                                style="width:87%"
-                            ></div>
-
-                        </div>
-
-
-                    </article>
-
-
-
-                    <!-- ANOMALIES -->
-
-                    <article class="card">
-
-
-                        <div class="card-header">
-
-                            <div>
-
-                                <small>
-                                    ANOMALY DETECTION
-                                </small>
-
-                                <h3>
-                                    Detected patterns
-                                </h3>
-
-                            </div>
-
-                            <span class="danger-badge">
-                                4 patterns
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            id="anomalies"
-                            class="anomaly-list"
-                        ></div>
-
-
-                    </article>
-
-
-                </div>
-
-
-
-                <!-- DIAGNOSTIC EXPLANATION -->
-
-                <article class="card diagnostic-explanation">
-
-
-                    <div>
-
-                        <small>
-                            HOW THE ENGINE WORKS
-                        </small>
-
-                        <h3>
-                            Multi-signal consistency analysis
-                        </h3>
+                      <span class="holo" aria-hidden="true"></span>
 
                     </div>
 
-
-                    <div class="diagnostic-methods">
-
-
-                        <div class="method">
-
-                            <span>
-                                01
-                            </span>
-
-                            <strong>
-                                Text Sentiment
-                            </strong>
-
-                            <p>
-                                Compares language patterns
-                                with predicted sentiment.
-                            </p>
-
-                        </div>
-
-
-                        <div class="method">
-
-                            <span>
-                                02
-                            </span>
-
-                            <strong>
-                                Rating Analysis
-                            </strong>
-
-                            <p>
-                                Detects conflicts between
-                                star ratings and review text.
-                            </p>
-
-                        </div>
-
-
-                        <div class="method">
-
-                            <span>
-                                03
-                            </span>
-
-                            <strong>
-                                Pattern Detection
-                            </strong>
-
-                            <p>
-                                Finds repeated complaints
-                                and emerging product issues.
-                            </p>
-
-                        </div>
-
-
-                        <div class="method">
-
-                            <span>
-                                04
-                            </span>
-
-                            <strong>
-                                Risk Scoring
-                            </strong>
-
-                            <p>
-                                Prioritizes feedback based
-                                on business impact.
-                            </p>
-
-                        </div>
-
-
-                    </div>
-
-
-                </article>
-
-
-            </section>
-
-
-
-            <!-- =================================================
-                 AI INSIGHTS
-            ================================================== -->
-
-            <section
-                id="insights"
-                class="page"
-            >
-
-
-                <div class="page-header">
-
-                    <div>
-
-                        <small>
-                            AI PRODUCT INTELLIGENCE
-                        </small>
-
-                        <h2>
-                            Actionable Insights
-                        </h2>
-
-                        <p>
-                            Convert customer signals into
-                            product and business actions.
-                        </p>
-
-                    </div>
-
-
-                    <span class="ai-status">
-                        ✦ AI ENGINE ACTIVE
-                    </span>
+                  </div>
 
                 </div>
-
-
-
-                <div
-                    id="insight-cards"
-                    class="insight-grid"
-                ></div>
-
-
-
-                <!-- AI SUMMARY -->
-
-                <article class="card ai-summary">
-
-
-                    <div class="ai-summary-icon">
-                        ✦
-                    </div>
-
-
-                    <div>
-
-                        <small>
-                            EXECUTIVE SUMMARY
-                        </small>
-
-                        <h3>
-                            Customer experience is healthy,
-                            but support is becoming a risk.
-                        </h3>
-
-                        <p>
-                            Overall sentiment remains positive.
-                            However, repeated support complaints
-                            and delivery delays are emerging as
-                            the strongest negative signals.
-                        </p>
-
-                    </div>
-
-
-                </article>
-
-
-            </section>
-
-
-
-            <!-- =================================================
-                 ANALYTICS
-            ================================================== -->
-
-            <section
-                id="analytics"
-                class="page"
-            >
-
-
-                <div class="page-header">
-
-                    <small>
-                        BUSINESS ANALYTICS
-                    </small>
-
-                    <h2>
-                        Customer Analytics
-                    </h2>
-
-                    <p>
-                        Monitor sentiment and customer
-                        experience performance.
-                    </p>
-
-                </div>
-
-
-
-                <div class="analytics-grid">
-
-
-                    <article class="card analytics-stat">
-
-                        <small>
-                            CUSTOMER SATISFACTION
-                        </small>
-
-                        <h2>
-                            84.2%
-                        </h2>
-
-                        <span class="positive">
-                            ↑ 5.6% this month
-                        </span>
-
-                    </article>
-
-
-                    <article class="card analytics-stat">
-
-                        <small>
-                            NPS SCORE
-                        </small>
-
-                        <h2>
-                            +62
-                        </h2>
-
-                        <span class="positive">
-                            ↑ 7 points
-                        </span>
-
-                    </article>
-
-
-                    <article class="card analytics-stat">
-
-                        <small>
-                            RESPONSE RATE
-                        </small>
-
-                        <h2>
-                            91.7%
-                        </h2>
-
-                        <span class="positive">
-                            ↑ 2.3%
-                        </span>
-
-                    </article>
-
-
-                    <article class="card analytics-stat">
-
-                        <small>
-                            ESCALATION RATE
-                        </small>
-
-                        <h2>
-                            3.8%
-                        </h2>
-
-                        <span class="negative">
-                            ↑ 0.9%
-                        </span>
-
-                    </article>
-
-
-                </div>
-
-
-
-                <article class="card">
-
-
-                    <div class="card-header">
-
-                        <div>
-
-                            <small>
-                                PRODUCT PERFORMANCE
-                            </small>
-
-                            <h3>
-                                Sentiment by product area
-                            </h3>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="product-performance">
-
-
-                        <div class="performance-row">
-
-                            <span>
-                                Mobile App
-                            </span>
-
-                            <div class="progress">
-
-                                <div
-                                    style="width:88%"
-                                ></div>
-
-                            </div>
-
-                            <strong>
-                                88%
-                            </strong>
-
-                        </div>
-
-
-                        <div class="performance-row">
-
-                            <span>
-                                Web Platform
-                            </span>
-
-                            <div class="progress">
-
-                                <div
-                                    style="width:91%"
-                                ></div>
-
-                            </div>
-
-                            <strong>
-                                91%
-                            </strong>
-
-                        </div>
-
-
-                        <div class="performance-row">
-
-                            <span>
-                                Delivery
-                            </span>
-
-                            <div class="progress">
-
-                                <div
-                                    style="width:74%"
-                                ></div>
-
-                            </div>
-
-                            <strong>
-                                74%
-                            </strong>
-
-                        </div>
-
-
-                        <div class="performance-row">
-
-                            <span>
-                                Customer Support
-                            </span>
-
-                            <div class="progress">
-
-                                <div
-                                    style="width:61%"
-                                ></div>
-
-                            </div>
-
-                            <strong>
-                                61%
-                            </strong>
-
-                        </div>
-
-
-                    </div>
-
-
-                </article>
-
-
-            </section>
-
-
-
-            <!-- =================================================
-                 SETTINGS
-            ================================================== -->
-
-            <section
-                id="settings"
-                class="page"
-            >
-
-
-                <div class="page-header">
-
-                    <small>
-                        SYSTEM CONFIGURATION
-                    </small>
-
-                    <h2>
-                        Settings
-                    </h2>
-
-                    <p>
-                        Configure Sentinel CX preferences.
-                    </p>
-
-                </div>
-
-
-
-                <div class="settings-grid">
-
-
-                    <article class="card settings-card">
-
-
-                        <small>
-                            ANALYSIS ENGINE
-                        </small>
-
-                        <h3>
-                            Sentiment Configuration
-                        </h3>
-
-
-                        <label class="setting-row">
-
-                            <div>
-
-                                <strong>
-                                    Automatic Analysis
-                                </strong>
-
-                                <p>
-                                    Analyze new feedback automatically.
-                                </p>
-
-                            </div>
-
-                            <input
-                                type="checkbox"
-                                checked
-                            >
-
-                        </label>
-
-
-                        <label class="setting-row">
-
-                            <div>
-
-                                <strong>
-                                    Anomaly Detection
-                                </strong>
-
-                                <p>
-                                    Detect inconsistent feedback.
-                                </p>
-
-                            </div>
-
-                            <input
-                                type="checkbox"
-                                checked
-                            >
-
-                        </label>
-
-
-                        <label class="setting-row">
-
-                            <div>
-
-                                <strong>
-                                    Critical Alerts
-                                </strong>
-
-                                <p>
-                                    Alert when critical feedback appears.
-                                </p>
-
-                            </div>
-
-                            <input
-                                type="checkbox"
-                                checked
-                            >
-
-                        </label>
-
-
-                    </article>
-
-
-
-                    <article class="card settings-card">
-
-
-                        <small>
-                            DATA MANAGEMENT
-                        </small>
-
-                        <h3>
-                            Feedback Processing
-                        </h3>
-
-
-                        <label class="setting-field">
-
-                            <span>
-                                Default confidence threshold
-                            </span>
-
-                            <select>
-
-                                <option>
-                                    80%
-                                </option>
-
-                                <option selected>
-                                    90%
-                                </option>
-
-                                <option>
-                                    95%
-                                </option>
-
-                                <option>
-                                    98%
-                                </option>
-
-                            </select>
-
-                        </label>
-
-
-                        <label class="setting-field">
-
-                            <span>
-                                Default risk level
-                            </span>
-
-                            <select>
-
-                                <option selected>
-                                    Medium
-                                </option>
-
-                                <option>
-                                    High
-                                </option>
-
-                                <option>
-                                    Critical
-                                </option>
-
-                            </select>
-
-                        </label>
-
-
-                    </article>
-
-
-                </div>
-
-
-            </section>
-
-
-        </section>
-
-
-    </main>
-
-
-</div>
-
-
-
-<!-- =====================================================
-     ANALYSIS MODAL
-====================================================== -->
-
-<div
-    id="analysis-modal"
-    class="modal"
->
-
-
-    <div class="modal-content">
-
-
-        <!-- CLOSE -->
-
-        <button
-            id="close-modal"
-            class="close"
-            aria-label="Close"
-        >
-            ×
-        </button>
-
-
-        <!-- HEADER -->
-
-        <div class="modal-header">
-
-            <div class="modal-icon">
-                ✦
+              </div>
             </div>
+          </div>
 
-            <div>
-
-                <small>
-                    SENTIMENT ANALYZER
-                </small>
-
-                <h2>
-                    Analyze Customer Feedback
-                </h2>
-
-            </div>
+          <p class="flip-hint" aria-hidden="true">
+            Tap the card to flip <span>↻</span>
+          </p>
 
         </div>
 
+        <div class="about-facts" data-reveal>
 
-        <!-- INPUT -->
+          <p class="label"><span>Quick facts</span></p>
 
-        <label class="modal-label">
-            Customer Feedback
-        </label>
+          <dl class="facts" id="facts"></dl>
 
+          <p class="quote" id="quote"></p>
 
-        <textarea
-            id="feedback-input"
-            placeholder="Paste customer feedback here..."
-        ></textarea>
-
-
-        <div class="character-count">
-            <span id="character-count">
-                0
-            </span>
-            characters
         </div>
 
+      </div>
+    </section>
 
-        <!-- ACTION -->
+    <!-- SKILLS SECTION -->
+    <section class="section skills" id="skills">
 
-        <button
-            id="run-analysis"
-            class="primary-button full-width"
-        >
-            ✦ Run Diagnostic
-        </button>
+      <p class="label" data-reveal>
+        <span>02</span><span class="rule"></span><span>Skills</span>
+      </p>
 
+      <h2 class="h2 split" data-split>
+        The periodic table <em>of my stack.</em>
+      </h2>
 
-        <!-- RESULT -->
+      <p class="muted sub" data-reveal id="skillsNote"></p>
 
-        <div
-            id="analysis-result"
-            class="analysis-result"
-        ></div>
+      <div class="chips-row" data-reveal id="famChips"
+        role="group" aria-label="Filter by family"></div>
 
+      <div class="skills-body">
 
-    </div>
+        <div class="ptable" id="ptable"></div>
 
+        <aside class="preview" id="preview" aria-live="polite">
+          <div class="pv-logo" id="pvLogo"></div>
+          <div class="pv-name" id="pvName"></div>
+          <div class="pv-fam" id="pvFam"></div>
+          <p class="pv-hint">Hover any element to see its logo</p>
+        </aside>
 
-</div>
+      </div>
+    </section>
 
+    <!-- PROJECTS SECTION -->
+    <section class="section work" id="work">
 
-
-<!-- =====================================================
-     NOTIFICATION PANEL
-====================================================== -->
-
-<div
-    id="notification-panel"
-    class="notification-panel"
->
-
-
-    <div class="notification-header">
-
-        <strong>
-            Notifications
-        </strong>
-
-        <button
-            id="close-notifications"
-        >
-            ×
-        </button>
-
-    </div>
-
-
-    <div class="notification-item critical">
-
-        <span>
-            !
-        </span>
+      <div class="work-head">
 
         <div>
 
-            <strong>
-                Critical feedback
-            </strong>
+          <p class="label" data-reveal>
+            <span>03</span><span class="rule"></span><span>Selected work</span>
+          </p>
 
-            <p>
-                6 new critical reviews detected.
-            </p>
-
-            <small>
-                8 minutes ago
-            </small>
+          <h2 class="h2 split" data-split>
+            Things I've <em>built.</em>
+          </h2>
 
         </div>
 
-    </div>
+        <p class="side-note" data-reveal id="projectsNote"></p>
 
+      </div>
 
-    <div class="notification-item">
+      <div class="panels" id="panels" data-reveal></div>
 
-        <span>
-            ↑
-        </span>
+    </section>
+
+    <!-- LEARNING SECTION -->
+    <section class="section learning" id="learning">
+
+      <div class="learn-grid">
+
+        <div class="learn-head">
+
+          <p class="label" data-reveal>
+            <span>04</span><span class="rule"></span>
+            <span id="learningLabel">Learning log</span>
+          </p>
+
+          <h2 class="h2 split" data-split>
+            Always <em>learning.</em>
+          </h2>
+
+          <p class="muted" data-reveal id="learningNote"></p>
+
+        </div>
+
+        <ol class="learn-list" id="learnList" data-reveal></ol>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE AND EDUCATION -->
+    <section class="section journey" id="journey">
+
+      <div class="journey-head">
 
         <div>
 
-            <strong>
-                Sentiment improved
-            </strong>
+          <p class="label" data-reveal>
+            <span>05</span><span class="rule"></span><span>Journey</span>
+          </p>
 
-            <p>
-                Positive sentiment increased by 4.2%.
-            </p>
-
-            <small>
-                32 minutes ago
-            </small>
+          <h2 class="h2 split" data-split>
+            Education &amp; <em>experience.</em>
+          </h2>
 
         </div>
 
-    </div>
+        <p class="side-note" data-reveal id="journeyNote"></p>
 
+      </div>
 
-    <div class="notification-item">
+      <div class="tl" id="tl">
 
-        <span>
-            ✦
-        </span>
+        <div class="tl-items" id="tlItems"></div>
 
-        <div>
+        <div class="tl-line">
+          <i id="tlFill"></i>
+        </div>
 
-            <strong>
-                AI insight ready
-            </strong>
+        <div class="tl-year-col">
+          <div class="tl-year">
+            <span class="tl-dot"></span>
+            <b id="tlYear">2025</b>
+          </div>
+        </div>
 
-            <p>
-                New product recommendation generated.
+        <div class="tl-next" aria-hidden="true">Next</div>
+
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="achv" id="achievements">
+
+      <div class="achv-sticky">
+
+        <div class="achv-head">
+
+          <div>
+
+            <p class="label" data-reveal>
+              <span>06</span><span class="rule"></span><span>Achievements</span>
             </p>
 
-            <small>
-                1 hour ago
-            </small>
+            <h2 class="h2 split" data-split>
+              Proud <em>moments.</em>
+            </h2>
+
+          </div>
+
+          <div class="achv-progress" aria-hidden="true">
+            <i id="achvBar"></i>
+          </div>
 
         </div>
 
-    </div>
+        <div class="achv-viewport">
+          <div class="achv-track" id="achvTrack"></div>
+        </div>
 
+      </div>
+    </section>
 
-</div>
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
 
+      <p class="label" data-reveal>
+        <span>07</span><span class="rule"></span><span>Contact</span>
+      </p>
 
+      <h2 class="h2 huge split" data-split>
+        Let's build <em>something.</em>
+      </h2>
 
-<!-- =====================================================
-     GLOBAL SEARCH
-====================================================== -->
+      <div class="contact-grid">
 
-<div
-    id="search-overlay"
-    class="search-overlay"
->
+        <div data-reveal>
 
+          <p class="lead" id="contactNote"></p>
 
-    <div class="global-search">
+          <div class="btn-row" id="contactBtns"></div>
 
+        </div>
 
-        <button
-            id="close-search"
-            class="close"
-        >
-            ×
-        </button>
+        <form class="form" id="contactForm" data-reveal novalidate>
 
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text"
+              autocomplete="name" required>
+          </div>
 
-        <small>
-            GLOBAL SEARCH
-        </small>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email"
+              autocomplete="email" required>
+          </div>
 
+          <div class="field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" rows="4" required></textarea>
+          </div>
 
-        <h2>
-            Search Sentinel CX
-        </h2>
+          <input type="hidden" name="_subject"
+            value="New message from your portfolio website">
 
+          <input type="text" name="_gotcha" tabindex="-1"
+            autocomplete="off" aria-hidden="true" style="display:none">
 
-        <input
-            id="global-search-input"
-            type="search"
-            placeholder="Search feedback, customers, topics..."
-        >
+          <div class="form-foot">
 
+            <button class="btn btn-dark" type="submit">
+              Send message <span class="arr">→</span>
+            </button>
 
-        <div
-            id="global-search-results"
-            class="search-results"
-        ></div>
+            <p class="form-status" id="formStatus" role="status"></p>
 
+          </div>
 
-    </div>
+        </form>
 
+      </div>
+    </section>
 
-</div>
+  </main>
 
+  <!-- FOOTER -->
+  <footer class="footer">
 
+    <span>
+      © <span id="year">2026</span>
+      <span data-bind="name">Anand Tiwari</span>
+    </span>
 
-<!-- =====================================================
-     JAVASCRIPT
-====================================================== -->
+    <span class="footer-mid">
+      Designed &amp; built with HTML, CSS &amp; JavaScript
+    </span>
 
-<script
-    src="js/app.js"
-></script>
+    <a href="#home">Back to top ↑</a>
 
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
 
 </body>
-
 </html>
